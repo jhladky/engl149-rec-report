@@ -1,0 +1,7 @@
+.tmp
+*.lot
+*.lof
+*.aux
+*.log
+*.out
+*.toc
