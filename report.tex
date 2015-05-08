@@ -7,6 +7,7 @@
 \usepackage{textcomp}
 \usepackage{titlesec}
 \usepackage{hanging}
+\usepackage{url}
 \newcommand{\sectionbreak}{\clearpage}
 
 \graphicspath{ {img/} }
@@ -45,7 +46,9 @@
 
 \listoffigures
 \bigskip
-\textit{Title Image} \hspace{0.25in} A map of the IPv6 world. The image is a result of mapping the connections between the one hundred thousand most central IPv6 nodes on the Internet.
+\begin{hangparas}{1.35in}{1}
+\hspace{0.25in}\textit{Title Image} \hspace{0.25in} A map of the IPv6 world. The image is a result of mapping the connections between the one hundred thousand most central IPv6 nodes on the Internet.
+\end{hangparas}
 
 \begingroup
 \let\clearpage\relax
@@ -56,12 +59,12 @@
 \pagenumbering{arabic}
 
 \section{Introduction}
-The Internet Protocol version 4 was standardized in 1981 by DARPA, a division of the Department of Defense focused on developing cutting-edge technologies. The protocol --- designed to connect every computer on the globe --- could address roughly 4 billion hosts, a number which seemed unbelieveably immense compared to the 200 or so computers on the Internet at the time.\\\\
-On the 4th of July of this year the American Registry for Internet Numbers, which assigns Internet addresses (``IP addresses'') is predicted to exhaust its remaining IP addresses. Registries in Asia and Europe have already run out of their share of the ``address space''.  A replacement protocol -- version 6 -- was approved in 1998, but laid dormant for most of the 2000s. Now, IPv4 exhaustion has spurred rapid adoption. Figure~\ref{fig:v6_adoption} shows the skyrocketing IPv6 adoption rates. IPv6 is rapidly becoming relevant in both the consumer and enterprise sectors.
+The Internet Protocol version 4 was standardized in 1981 by DARPA, a division of the Department of Defense focused on developing cutting-edge technologies (Information Sciences Inst.). The protocol --- designed to connect every computer on the globe --- could address roughly 4 billion hosts, a number which seemed unbelieveably immense compared to the 200 or so computers on the Internet at the time (Computer History Museum).\\\\
+On the 4th of July of this year the American Registry for Internet Numbers, which assigns Internet addresses (``IP addresses'') is predicted to exhaust its remaining IP addresses (Huston). Registries in Asia and Europe have already run out of their share of the ``address space''.  A replacement protocol -- version 6 -- was approved in 1998, but laid dormant for most of the 2000s (Deering \& Hinden). Now, IPv4 exhaustion has spurred rapid adoption. Figure~\ref{fig:v6_adoption} shows the skyrocketing IPv6 adoption rates. IPv6 is rapidly becoming relevant in both the consumer and enterprise sectors.
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics[width=0.7\textwidth]{v6_adoption.png}
+  \includegraphics[width=0.65\textwidth]{v6_adoption.png}
   \caption{Percentage of users accessing \texttt{www.google.com} over IPv6}
   \label{fig:v6_adoption}
 \end{figure}
@@ -87,13 +90,13 @@ I conducted secondary research online to answer my first question. I read severa
 These requirements were to ensure that lab users would not be too unfamiliar with the new lab material, and so that old material could be used a template when writing new lab manuals and other documentation.
 
 \subsubsection{Cisco: ``IPv6 Tunnel though a IPv4 Network''}
-IPv6 and IPv4 networks are incompatible, and as a result it is necessary to pass IPv6 traffic through IPv4 networks so that they can communicate in the absence of a direct link. This how-to guide details individual steps to accomplish this on Cisco iOS routers.
+IPv6 and IPv4 networks are incompatible, and as a result it is necessary to pass IPv6 traffic through IPv4 networks so that they can communicate in the absence of a direct link (Cisco). This how-to guide details individual steps to accomplish this on Cisco iOS routers.
 
 \subsubsection{Cisco: ``IPv6 Autoconfiguration''}
-IPv6 addresses are very long and cumbersome to enter manually. Thus the protocol includes a feature where computers running IPv6 can pick their own address based on pre-determined factors inherent to the system. This white paper explains the process and lists several drawbacks.
+IPv6 addresses are very long and cumbersome to enter manually. Thus the protocol includes a feature where computers running IPv6 can pick their own address based on pre-determined factors inherent to the system (Donze). This white paper explains the process and lists several drawbacks.
 
 \subsubsection{CircleID: ``DHCP for IPv4 vs. IPv6''}
-This web article, intended for consumers, discusses how IPv6 addresses may be assigned through the Dynamic Host Configuration Protocol (DHCP). DHCP, optional in many IPv4 environments, is a crucial component of the new protocol.
+This web article, intended for consumers, discusses how IPv6 addresses may be assigned through the Dynamic Host Configuration Protocol (DHCP). DHCP, optional in many IPv4 environments, is a crucial component of the new protocol (Donaldson).
 
 \section{Results}
 To evaluate the results of my interview with Dr. Smith I created a table summarizing the results of the interview. To evaluate the secondary results I used my own knowledge as a T.A. for the CPE464 lab section. I also created a decision matrix that assigns objective value to the different technologies. The secondary results will be described in a short summary, and then evaluated in the matrix based on the two criteria mentioned in the \textit{Methods} section.
@@ -190,23 +193,40 @@ A single new lab should be added to the lab curriculum, with no modification to 
 \end{itemize}
 
 \section{Works Cited}
-aaaa
+
+\begin{hangparas}{0.25in}{1}
+Cisco. ``IPv6 Tunnel through an IPv4 Network.'' Cisco, 10 Aug. 2006. Web. 06 May 2015. <\url{http://www.cisco.com/c/en/us/support/docs/ip/ip-version-6/25156_ipv6tunnel.html}>.\\
+
+Computer History Museum. ``Computer History Museum.'' Computer History 1980s. Computer History Museum, 2004. Web. 06 May 2015. <\url{http://www.computerhistory.org/internet_history/internet_history_80s.html}>.\\
+
+Deering, S., and R. Hinden. Internet Protocol, Version 6 (IPv6) Specification. RFC 2460. N.p.: Internet Society, 1998. Print\\
+
+Donaldson, Richard. ``DHCP for IPv4 vs. IPv6 - What You Need to Know.'' CircleID. N.p., 02 June 2011. Web. 06 May 2015. <\url{http://www.circleid.com/posts/dhcp_for_ipv4_vs_ipv6_what_you_need_to_know/}>.\\
+
+Donze, Francois. ``IPv6 Autoconfiguration.'' The Internet Protocol Journal 7.2 (2004): n. pag. Web. 6 May 2015. <\url{http://www.cisco.com/web/about/ac123/ac147/archived_issues/ipj_7-2/ipv6_autoconfig.html}>.\\
+
+Huston, Geoff. ``IPv4 Address Report.'' IPv4 Address Report. N.p., 06 May 2015. Web. 06 May 2015. <\url{http://www.potaroo.net/tools/ipv4/}>.\\
+
+Information Sciences Institute. INTERNET PROTOCOL DARPA INTERNET PROGRAM PROTOCOL SPECIFICATION. RFC 791. Arlington: Defense Advanced Research Projects Agency, 1981. Print.
+\end{hangparas}
 
 \begingroup
 \let\clearpage\relax
 
+\bigskip
 \section{Figures Cited}
 
 \begin{hangparas}{0.25in}{1}
-Title Picture. Visualization with 100k Connections. Digital image. VISUALIZING THE INTERNET. DTU 02817, n.d. Web. 6 May 2015. <http://www.easybib.com/mla-format/digital-image-citation>.\\
+Title Picture. Visualization with 100k Connections. Digital image. VISUALIZING THE INTERNET. DTU 02817, n.d. Web. 6 May 2015. <\url{http://www.olivergroth.dk/site/images/map_100k.png}>.\\
 
-Figure~\ref{fig:v6_adoption}. IPv6 Adoption. Digital image. IPv6 -- Google. Google Inc., 6 May 2015. Web. 6 May 2015. <https://www.google.com/intl/en/ipv6/statistics.html>.\\
+Figure~\ref{fig:v6_adoption}. IPv6 Adoption. Digital image. IPv6 -- Google. Google Inc., 6 May 2015. Web. 6 May 2015. <\url{https://www.google.com/intl/en/ipv6/statistics.html}>.\\
 
-Figure~\ref{fig:the_stack}. Kozierok, Charles MM. OSI Reference Model and TCP/IP Model Layers. Digital image. The TCP/IP Guide. N.p., 20 Sept. 2005. Web. 6 May 2015. <http://www.tcpipguide.com/fr-ee/diagrams/tcpiplayers.png>.\\
+Figure~\ref{fig:the_stack}. Kozierok, Charles MM. OSI Reference Model and TCP/IP Model Layers. Digital image. The TCP/IP Guide. N.p., 20 Sept. 2005. Web. 6 May 2015. <\url{http://www.tcpipguide.com/free/diagrams/tcpiplayers.png}>.\\
 
-Figure~\ref{fig:v6_tunneling}. Router-to-Router Tunneling. Digital image. IPv6 Transition Technologies (TechRef). Microsoft Inc., 7 Jan. 2009. Web. 6 May 2015. <https://i-technet.sec.s-msft.com/dynimg/IC197206.gif>.
+Figure~\ref{fig:v6_tunneling}. Router-to-Router Tunneling. Digital image. IPv6 Transition Technologies (TechRef). Microsoft Inc., 7 Jan. 2009. Web. 6 May 2015. <\url{https://i-technet.sec.s-msft.com/dynimg/IC197206.gif}>.
 \end{hangparas}
 
+\bigskip
 \section{Tables Cited}
 
 \begin{hangparas}{0.25in}{1}
