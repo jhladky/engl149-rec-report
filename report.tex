@@ -95,9 +95,6 @@ IPv6 addresses are very long and cumbersome to enter manually. Thus the protocol
 \subsubsection{CircleID: ``DHCP for IPv4 vs. IPv6''}
 This web article, intended for consumers, discusses how IPv6 addresses may be assigned through the Dynamic Host Configuration Protocol (DHCP). DHCP, optional in many IPv4 environments, is a crucial component of the new protocol.
 
-\subsubsection{Cisco: ``RIP for IPv6''}
-Routers, devices which move network traffic between physical networks, can be configured to talk to each other automatically using the Router Information Protocol. This manual list comprehensively all the commands necessary to configure RIP for IPv6.
-
 \section{Results}
 To evaluate the results of my interview with Dr. Smith I created a table summarizing the results of the interview. To evaluate the secondary results I used my own knowledge as a T.A. for the CPE464 lab section. I also created a decision matrix that assigns objective value to the different technologies. The secondary results will be described in a short summary, and then evaluated in the matrix based on the two criteria mentioned in the \textit{Methods} section.
 
@@ -136,14 +133,21 @@ Dr. Smith gave me a macro-level overview of the CPE464 curriculum. The lab curri
 The single method simply fills what was a week for students to do make-up lab work with a new lab. No re-factoring of existing curriculum is required, but students will not be exposed to IPv6 until late in the quarter, as the current labs are tightly integrated and must be completed in a certain order.\\\\
 The double method is a compromise between the multiple and single methods. Only two labs are re-factored, but much more information is removed. This information could then either be removed completely from the curriculum or moved to a lab at the end. This method, like the multiple method, provides good exposure to IPv6, but possible at the expense of other important network concepts.
 
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{v6_tunneling.png}
+  \caption{Simplified diagram of how IPv6 tunneling works.}
+  \label{fig:v6_tunneling}
+\end{figure}
+
 \subsection{Cisco: ``IPv6 Tunnel though a IPv4 Network''}
-asdfasdf
+IP Tunneling is ubiquitous in networking, and IPv4-only tunneling is a crucial component of the Virtual Private Network (VPN), a widely used enterprise technology. Although it is not currently covered, students can be easily familiarized with IP Tunneling during lecture, as the core concept is easy to grasp. Figure~\ref{fig:v6_tunneling} shows how tunneling works on the network level.
+
 \subsection{Cisco: ``IPv6 Autoconfiguration''}
-dsfadsf
+IPv6 auto-configuration is a feature unique to the new protocol, and thus this technology suffers when compared IPv4, which has no comparable feature. Although some custom implementations exist which do the same thing, students are not likely to be familiar with them.
+
 \subsection{CircleID: ``DHCP for IPv4 vs. IPv6''}
-aaaaa
-\subsection{Cisco: ``RIP for IPv6''}
-aaaa
+DHCP is used everyday by consumers, and is already covered in lecture, so it receives a very high familiarity score. However it suffers when used as a comparison protocol because its IPv6 implementation is \textit{too} similar to it's v4 implementation. The commands and concepts used in both versions are nearly identical, and thus not useful for demonstrating IPv6.
 
 \medskip
 \begin{table}[h!]
@@ -152,15 +156,13 @@ aaaa
   \begin{tabulary}{\textwidth}{|L|C|C|C|}
     \hline
     Technology & Familiarity Score (0-9) & IPv4 Parallel Score (0-9) & Total Score (0-18) \\ \hline\hline
-    & & & \\ \hline
-    & & & \\ \hline
-    & & & \\ \hline
-    & & & \\ \hline
+    Tunneling          & 7 & 7 & 14 \\ \hline
+    Auto-configuration & 4 & 2 & 6 \\ \hline
+    DHCP               & 9 & 4 & 13 \\ \hline
     \hline
   \end{tabulary}
   \caption{Decision matrix for selecting the best IPv6 technology}
 \end{table}
-
 
 \section{Conclusions}
 aaaa
