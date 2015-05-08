@@ -6,6 +6,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
 \usepackage{titlesec}
+\usepackage{hanging}
 \newcommand{\sectionbreak}{\clearpage}
 
 \graphicspath{ {img/} }
@@ -193,8 +194,27 @@ aaaa
 
 \begingroup
 \let\clearpage\relax
+
 \section{Figures Cited}
-sdfsdfsdf
+
+\begin{hangparas}{0.25in}{1}
+Title Picture. Visualization with 100k Connections. Digital image. VISUALIZING THE INTERNET. DTU 02817, n.d. Web. 6 May 2015. <http://www.easybib.com/mla-format/digital-image-citation>.\\
+
+Figure~\ref{fig:v6_adoption}. IPv6 Adoption. Digital image. IPv6 -- Google. Google Inc., 6 May 2015. Web. 6 May 2015. <https://www.google.com/intl/en/ipv6/statistics.html>.\\
+
+Figure~\ref{fig:the_stack}. Kozierok, Charles MM. OSI Reference Model and TCP/IP Model Layers. Digital image. The TCP/IP Guide. N.p., 20 Sept. 2005. Web. 6 May 2015. <http://www.tcpipguide.com/fr-ee/diagrams/tcpiplayers.png>.\\
+
+Figure~\ref{fig:v6_tunneling}. Router-to-Router Tunneling. Digital image. IPv6 Transition Technologies (TechRef). Microsoft Inc., 7 Jan. 2009. Web. 6 May 2015. <https://i-technet.sec.s-msft.com/dynimg/IC197206.gif>.
+\end{hangparas}
+
+\section{Tables Cited}
+
+\begin{hangparas}{0.25in}{1}
+Table~\ref{table:method_summary}. Hladky, Jacob D. ``Summary of Methods for Integrating New Material into CPE464 Lab.'' pdfTeX 3.14 (Tex Live 2013/Debian) \\
+
+Table~\ref{table:dec_matrix}. Hladky, Jacob D. ``Decision Matrix for Selecting the Best IPv6 Technology.'' pdfTeX 3.14 (Tex Live 2013/Debian)
+\end{hangparas}
+
 \endgroup
 
 \end{document}
