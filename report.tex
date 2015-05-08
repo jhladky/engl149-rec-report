@@ -1,6 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
+\usepackage{tabulary}
 \usepackage{courier}
 \usepackage{times}
 \usepackage[T1]{fontenc}
@@ -46,23 +47,26 @@
 \bigskip
 \textit{Title Image} \hspace{0.25in} A map of the IPv6 world. The image is a result of mapping the connections between the one hundred thousand most central IPv6 nodes on the Internet.
 
+\begingroup
+\let\clearpage\relax
 \listoftables
+\endgroup
 \clearpage
 
 \pagenumbering{arabic}
 
 \section{Introduction}
 The Internet Protocol version 4 was standardized in 1981 by DARPA, a division of the Department of Defense focused on developing cutting-edge technologies. The protocol --- designed to connect every computer on the globe --- could address roughly 4 billion hosts, a number which seemed unbelieveably immense compared to the 200 or so computers on the Internet at the time.\\\\
-On the 4th of July of this year the American Registry for Internet Numbers, which assigns Internet addresses (``IP addresses'') is predicted to exhaust its remaining IP addresses. Registries in Asia and Europe have already run out of their share of the ``address space''.  A replacement protocol, version 6, was approved in 1998. The protocol laid dormant for most of the 2000s, but the fast-approaching deadline has spurred its adoption. Figure~\ref{fig:v6_adoption} shows the skyrocketing IPv6 adoption rates. IPv6 is rapidly becoming relevant in both the consumer and enterprise sectors.
+On the 4th of July of this year the American Registry for Internet Numbers, which assigns Internet addresses (``IP addresses'') is predicted to exhaust its remaining IP addresses. Registries in Asia and Europe have already run out of their share of the ``address space''.  A replacement protocol -- version 6 -- was approved in 1998, but laid dormant for most of the 2000s. Now, IPv4 exhaustion has spurred rapid adoption. Figure~\ref{fig:v6_adoption} shows the skyrocketing IPv6 adoption rates. IPv6 is rapidly becoming relevant in both the consumer and enterprise sectors.
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics[width=0.75\textwidth]{v6_adoption.png}
+  \includegraphics[width=0.7\textwidth]{v6_adoption.png}
   \caption{Percentage of users accessing \texttt{www.google.com} over IPv6}
   \label{fig:v6_adoption}
 \end{figure}
 
-\noindent Cal Poly students taking CPE464, Introduction to Computer Networks, will learn IPv4 in depth. In their lab section, which accompanies the lecture, they will implement IPv4 on enterprise-grade networking equipment. The CPE464 lecture will also cover IPv6, but the lab will not. This report will present research about the best way to integrate the teaching of IPv6 into the CPE464 lab curriculum.\\\\
+\noindent Cal Poly students taking CPE464, Introduction to Computer Networks, will learn IPv4 in depth. In their accompanying lab section they will implement IPv4 on Cisco networking equipment. The CPE464 lecture will also cover IPv6, but the lab will not. This report will present research about the best way to integrate the teaching of IPv6 into the CPE464 lab curriculum.\\\\
 This research can be broken into two parts. The first will address networking technologies that implement IPv6. The second will investigate various ways to integrate these technologies into the existing lab curriculum. This report will then select the optimal option from each and combine them to form a lesson plan, a recommendation on what technology to use and how to use it in the CPE464 lab.\\\\
 The \textit{Methods} section of this report will summarize the areas of research that were looked into and what specific sources were researched in those areas. The \textit{Results} section will then present the research findings from each of the methods. The \textit{Conclusion} and \textit{Recommendations} sections will then detail an the best course of action derived from the research. Finally, a \textit{Glossary of Terms} will provide definitions for any unfamiliar terms used in this report.
 
@@ -95,12 +99,43 @@ This web article, intended for consumers, discusses how IPv6 addresses may be as
 Routers, devices which move network traffic between physical networks, can be configured to talk to each other automatically using the Router Information Protocol. This manual list comprehensively all the commands necessary to configure RIP for IPv6.
 
 \section{Results}
-% the results will follow the same structure as the methods, but i will just present conclusions
-To evaluate my secondary results I used my own knowledge as a T.A. for the CPE464 lab section, and a decision matrix that assigns objective value to the different technologies.
+To evaluate the results of my interview with Dr. Smith I created a table summarizing the results of the interview. To evaluate the secondary results I used my own knowledge as a T.A. for the CPE464 lab section. I also created a decision matrix that assigns objective value to the different technologies. The secondary results will be described in a short summary, and then evaluated in the matrix based on the two criteria mentioned in the \textit{Methods} section.
 
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=0.4\textwidth]{the_stack.png}
+  \caption{The Various Layers of the Network Stack}
+  \label{fig:the_stack}
+\end{figure}
 
 \subsection{Interview with Dr. Hugh Smith}
-adsfadsf
+Dr. Smith gave me a macro-level overview of the CPE464 curriculum. The lab curriculum is tightly coupled to the idea of the ``network stack'', shown in Figure~\ref{fig:the_stack}. Students start at the bottom of stack, and work their way gradually upward with each lab. There are 7 labs in total every quarter, and they are divided as follows:
+\begin{itemize}
+\item 2 labs on the link layer
+\item 4 labs on the network layer
+\item 1 lab on network security (session or presentation layer)
+\end{itemize}
+
+\noindent Dr. Smith suggested three different methods for integrating new material into the lab curriculum. The three methods are summarized in Table~\ref{table:method_summary} below.
+
+\medskip
+\begin{table}[h!]
+  \centering
+  \label{table:method_summary}
+  \begin{tabulary}{\textwidth}{|L|L|R|R|}
+    \hline
+    \textbf{Method Name} & \textbf{Short Description} & \textbf{\# Labs Required} & \textbf{Mins. Required Per Lab} \\ \hline\hline
+    Multiple & Whenever an IPv4 technology is used, also use the corresponding IPv6 variant & 6-7 & 30-40 \\ \hline
+    Single & Add a new lab focusing entirely on IPv6. & 1 & All (180) \\ \hline
+    Double & Split two labs between IPv4 and IPv6. & 2 & 90 \\ \hline
+  \end{tabulary}
+  \caption{Summary of methods for integrating new material into CPE464 lab}
+\end{table}
+
+\noindent The multiple method requires the most work. About 30 minutes of material would have to be removed from each lab to make room for the new IPv6 material. However, the new IPv6 material would already have been implemented using IPv4. Thus, labs constructed in this style have a high potential to become monotonous and repetitive for students. One significant advantage of this method is the wide range of exposure it would offer to IPv6 technologies.\\\\
+The single method simply fills what was a week for students to do make-up lab work with a new lab. No re-factoring of existing curriculum is required, but students will not be exposed to IPv6 until late in the quarter, as the current labs are tightly integrated and must be completed in a certain order.\\\\
+The double method is a compromise between the multiple and single methods. Only two labs are re-factored, but much more information is removed. This information could then either be removed completely from the curriculum or moved to a lab at the end. This method, like the multiple method, provides good exposure to IPv6, but possible at the expense of other important network concepts.
+
 \subsection{Cisco: ``IPv6 Tunnel though a IPv4 Network''}
 asdfasdf
 \subsection{Cisco: ``IPv6 Autoconfiguration''}
@@ -109,6 +144,23 @@ dsfadsf
 aaaaa
 \subsection{Cisco: ``RIP for IPv6''}
 aaaa
+
+\medskip
+\begin{table}[h!]
+  \centering
+  \label{table:dec_matrix}
+  \begin{tabulary}{\textwidth}{|L|C|C|C|}
+    \hline
+    Technology & Familiarity Score (0-9) & IPv4 Parallel Score (0-9) & Total Score (0-18) \\ \hline\hline
+    & & & \\ \hline
+    & & & \\ \hline
+    & & & \\ \hline
+    & & & \\ \hline
+    \hline
+  \end{tabulary}
+  \caption{Decision matrix for selecting the best IPv6 technology}
+\end{table}
+
 
 \section{Conclusions}
 aaaa
