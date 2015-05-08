@@ -165,13 +165,30 @@ DHCP is used everyday by consumers, and is already covered in lecture, so it rec
 \end{table}
 
 \section{Conclusions}
-aaaa
+All three methods of presenting IPv6 have drawbacks, but during analysis of the results is became clear that one drawback was significantly more important than the others: the amount of work that would be required to re-tool the entire lab curriculum. Both the multiple and double options, while offering significant exposure to IPv6, require changing other labs, and could possibly result in a reshuffling of the lab curriculum. The interview with Dr. Smith also brought to light how tightly coupled the CPE464 individual labs are, and that reshuffling them could cause significant confusion in both students and the T.A.s who help them. Thus, the best option is a single, monolithic lab that will be added as the last lab students complete in the quarter.\\\\
+For the faculty, this is the most ``efficient'' option, as it results in the most new material from the least effort spent on re-factoring. For the students, a single extra lab is a net increase in knowledge.\\\\
+On a similar note, the IPv6 technology that stands out is Tunneling. Auto-configuration is too obscure, and would require a genuine intellectual leap for many students because of its newness as a protocol. DHCP is common, but too easy. IP tunneling, which scored highest on the decision matrix, finds a middle path between these two extremes.\\\\
+These results provide answers to the two sub-questions presented in the \textit{Methods} section, and now a ``lesson-plan'' can be presented that combines both results. This report thus recommends the addition of a single new lab, in the place of the current lab make-up week, which teaches students how IPv6 works by means of having them implement an IPv6 tunnel, following the instructions in the Cisco guide.
 
 \section{Recommendations}
-aaaa
+A single new lab should be added to lab curriculum, with no modification to the other labs. The lab should teach IPv6 by having students implement an IPv6 tunnel through an existing IPv4 network. The students should follow the instructions presented in the Cisco guide ``IPv6 tunnel through an IPv4 network.''
 
 \section{Glossary of Terms}
-aaaa
+
+\begin{itemize}
+\item[] \textbf{Computer Network} --- A collection of computers that can all talk to each other
+\item[] \textbf{DHCP} --- The Dynamic Host Configuration Protocol. A method for a computer to automatically get an IP address without knowing anything about the network it's on.
+\item[] \textbf{Host} --- A computer on a network
+\item[] \textbf{iOS} --- The operating system running on Cisco network devices. Cisco iOS predates Apple's iOS running on iPhones.
+\item[] \textbf{IP Address} --- A number that uniquely identifies a computer on a network
+\item[] \textbf{IP Tunneling} --- Running traffic from some network A  through another network B where B can't see A's traffic
+\item[] \textbf{IPv4} --- The Internet Protocol, version 4. Dominant network protocol for the world for the past 30 years.
+\item[] \textbf{IPv6} --- The Internet Protocol, version 6. Replacement protocol for IPv4
+\item[] \textbf{IPv6 Autoconfiguration} --- A means for a computer to automatically get an IPv6 address without talking to a DHCP server or assigning one manually.
+\item[] \textbf{Network Stack} --- A collection of modular, inter-operating protocols designed to move data from physical transmission, \textit{e.g.} cables and Wi-Fi Access Points, to the user and back.
+\item[] \textbf{Network Traffic} --- Communication between hosts on a network
+\item[] \textbf{VPN} --- Virtual Private Network. A technology often used by large corporations to enable employees to connect to the office network while at home.
+\end{itemize}
 
 \section{Works Cited}
 aaaa
