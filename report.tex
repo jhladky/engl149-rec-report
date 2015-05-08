@@ -47,7 +47,7 @@
 \listoffigures
 \bigskip
 \begin{hangparas}{1.35in}{1}
-\hspace{0.25in}\textit{Title Image} \hspace{0.25in} A map of the IPv6 world. The image is a result of mapping the connections between the one hundred thousand most central IPv6 nodes on the Internet.
+\hspace{0.25in}\textit{Title Image} \hspace{0.25in} A map of the IPv6 world. The image is a result of mapping the connections between the 100,000 most central IPv6 nodes on the Internet.
 \end{hangparas}
 
 \begingroup
@@ -78,7 +78,7 @@ In the course of researching this report I split the problem at hand, of how bes
 These two questions can be categorized respectively as a technical question and a pedagogical question. To answer the technical question I consulted internet research and to answer the pedagogical question I interviewed Dr. Hugh Smith. These two methods are further detailed in the two subsections below.
 
 \subsection{Interview with Dr. Hugh Smith}
-I interviewed Dr. Hugh Smith to find an answer to my second question. Dr. Smith is the professor currently teaching the CPE464 lecture and lab sections (he is also the main recipient of this report.) As one of the co-authors of the lab curriculum, Dr. Smith is qualified to access which methods of presenting new lab material will be the most effective, and how they will meet the lab's unique constraints.\\\\
+I interviewed Dr. Hugh Smith to find an answer to my second question. Dr. Smith is the professor currently teaching the CPE464 lecture and lab sections (he is also the main recipient of this report.) As one of the co-authors of the lab curriculum, Dr. Smith is uniquely qualified to assess which methods of presenting new lab material will be the most effective, and how they will meet each lab's unique constraints.\\\\
  My aim in talking to Dr. Smith was to determine exactly that: how the current CPE464 lab is structured, and how various IPv6 technologies might be integrated with the current labs. During the interview Dr. Smith suggested several different strategies to accomplish this, and detailed their pros and cons.
 
 \subsection{Secondary Research}
@@ -99,7 +99,7 @@ IPv6 addresses are very long and cumbersome to enter manually. Thus the protocol
 This web article, intended for consumers, discusses how IPv6 addresses may be assigned through the Dynamic Host Configuration Protocol (DHCP). DHCP, optional in many IPv4 environments, is a crucial component of the new protocol (Donaldson).
 
 \section{Results}
-To evaluate the results of my interview with Dr. Smith I created a table summarizing the results of the interview. To evaluate the secondary results I used my own knowledge as a T.A. for the CPE464 lab section. I also created a decision matrix that assigns objective value to the different technologies. The secondary results will be described in a short summary, and then evaluated in the matrix based on the two criteria mentioned in the \textit{Methods} section.
+To evaluate the results of my interview with Dr. Smith I created a table summarizing the various methods of integrating new curriculum material mentioned in the interview. To evaluate the secondary results I used my own knowledge as a T.A. for the CPE464 lab section. I also created a decision matrix that assigns objective value to the different technologies. The secondary results will be described in a short summary, and then evaluated in the matrix based on the two criteria mentioned in the \textit{Methods} section.
 
 \begin{figure}[ht!]
   \centering
@@ -134,7 +134,7 @@ Dr. Smith gave me a macro-level overview of the CPE464 curriculum. The lab curri
 
 \noindent The multiple method requires the most work. About 30 minutes of material would have to be removed from each lab to make room for the new IPv6 material. However, the new IPv6 material would already have been implemented using IPv4. Thus, labs constructed in this style have a high potential to become monotonous and repetitive for students. One significant advantage of this method is the wide range of exposure it would offer to IPv6 technologies.\\\\
 The single method simply fills what was a week for students to do make-up lab work with a new lab. No re-factoring of existing curriculum is required, but students will not be exposed to IPv6 until late in the quarter, as the current labs are tightly integrated and must be completed in a certain order.\\\\
-The double method is a compromise between the multiple and single methods. Only two labs are re-factored, but much more information is removed. This information could then either be removed completely from the curriculum or moved to a lab at the end. This method, like the multiple method, provides good exposure to IPv6, but possible at the expense of other important network concepts.
+The double method is a compromise between the multiple and single methods. Only two labs are re-factored, but much more information is removed. This information could then either be removed completely from the curriculum or moved to a lab at the end. This method, like the multiple method, provides good exposure to IPv6, but possibly at the expense of other important network concepts.
 
 \begin{figure}[ht!]
   \centering
@@ -150,7 +150,7 @@ IP Tunneling is ubiquitous in networking, and IPv4-only tunneling is a crucial c
 IPv6 auto-configuration is a feature unique to the new protocol, and thus this technology suffers when compared IPv4, which has no comparable feature. Although some custom implementations exist which do the same thing, students are not likely to be familiar with them.
 
 \subsection{CircleID: ``DHCP for IPv4 vs. IPv6''}
-DHCP is used everyday by consumers, and is already covered in lecture, so it receives a very high familiarity score. However it suffers when used as a comparison protocol because its IPv6 implementation is \textit{too} similar to it's v4 implementation. The commands and concepts used in both versions are nearly identical, and thus not useful for demonstrating IPv6.
+DHCP is used everyday by consumers, and is already covered in lecture, so it receives a very high familiarity score. However it suffers when used as a comparison protocol because its IPv6 implementation is \textit{too} similar to its v4 implementation. The commands and concepts used in both versions are nearly identical, and thus not useful for demonstrating IPv6.
 
 \medskip
 \begin{table}[h!]
@@ -167,7 +167,7 @@ DHCP is used everyday by consumers, and is already covered in lecture, so it rec
 \end{table}
 
 \section{Conclusions}
-All three methods of presenting IPv6 have drawbacks, but during analysis of the results is became clear that one drawback was significantly more important than the others: the amount of work that would be required to re-tool the entire lab curriculum. Both the multiple and double options, while offering significant exposure to IPv6, require changing other labs, and could possibly result in a reshuffling of the lab curriculum. The interview with Dr. Smith also brought to light how tightly coupled the CPE464 individual labs are, and that reshuffling them could cause significant confusion in both students and the T.A.s who help them. Thus, the best option is a single, monolithic lab that will be added as the last lab students complete in the quarter.\\\\
+All three methods of presenting IPv6 have drawbacks, but while analyzing the results it became clear that one drawback was significantly more important than the others: the amount of work that would be required to re-tool the entire lab curriculum. Both the multiple and double options, while offering significant exposure to IPv6, require changing other labs, and could possibly result in a reshuffling of the lab curriculum. The interview with Dr. Smith also brought to light how tightly coupled the CPE464 individual labs are, and that reshuffling them could cause significant confusion in both students and the T.A.s who help them. Thus, the best option is a single, monolithic lab that will be added as the last lab students complete in the quarter.\\\\
 For the faculty, this is the most ``efficient'' option, as it results in the most new material from the least effort spent on re-factoring. For the students, a single extra lab is a net increase in knowledge.\\\\
 On a similar note, the IPv6 technology that stands out is Tunneling. Auto-configuration is too obscure, and would require a genuine intellectual leap for many students because of its newness as a protocol. DHCP is common, but too easy. IP tunneling, which scored highest on the decision matrix, finds a middle path between these two extremes.\\\\
 These results provide answers to the two sub-questions presented in the \textit{Methods} section, and now a ``lesson-plan'' can be presented that combines both results. This report thus recommends the addition of a single new lab, in the place of the current lab make-up week, which teaches students how IPv6 works by means of having them implement an IPv6 tunnel, following the instructions in the Cisco guide.
